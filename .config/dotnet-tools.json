@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "dotnet-stryker": {
+      "version": "4.7.0",
+      "commands": ["dotnet-stryker"]
+    },
+    "altcover.global": {
+      "version": "9.0.145",
+      "commands": ["altcover"]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+rules:
+  - id: csharp-hardcoded-secret
+    pattern-regex: (?i)(password|secret|apikey|api_key)\s*=\s*["'][^"']{8,}["']
+    message: Potential hardcoded secret
+    languages: [csharp]
+    severity: WARNING
+
+  - id: csharp-sql-concat
+    pattern: $SQL = "..." + $VAR + "..."
+    message: Potential SQL injection via concatenation
+    languages: [csharp]
+    severity: ERROR

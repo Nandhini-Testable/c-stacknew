@@ -1,7 +1,11 @@
 <Project>
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
     <LangVersion>12.0</LangVersion>
-    <RollForward>Major</RollForward>
+    <IsTestProject Condition="$(MSBuildProjectName.EndsWith('.Tests'))">true</IsTestProject>
+    <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+    <NoWarn>$(NoWarn);NU1605</NoWarn>
   </PropertyGroup>
+  <Import Project="$(MSBuildThisFileDirectory)Directory.Analyzers.props" Condition="Exists('$(MSBuildThisFileDirectory)Directory.Analyzers.props')" />
 </Project>
