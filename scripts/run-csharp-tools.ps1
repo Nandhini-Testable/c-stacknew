@@ -60,8 +60,8 @@ Write-Host "[PyDriller]" -ForegroundColor Cyan
 Record "PyDriller" "pydriller_analyze.py" $LASTEXITCODE "reports/pydriller.json"
 
 Write-Host "[Semgrep]" -ForegroundColor Cyan
-$semgrep = Join-Path $Root "tools/.venv/Scripts/pysemgrep"
-& $semgrep scan --config .semgrep.yml --metrics off --json --output reports/semgrep.json backend 2>&1 | Out-File reports/logs/semgrep.log
+$semgrepLog = Join-Path $Root "reports/logs/semgrep.log"
+& $venv -m semgrep scan --config .semgrep.yml --metrics off --json --output reports/semgrep.json backend *> $semgrepLog
 $semgrepTriggered = (Test-Path "reports/semgrep.json") -or ($LASTEXITCODE -in 0, 2)
 Record "Semgrep" "semgrep scan" $LASTEXITCODE "reports/semgrep.json"
 if ($semgrepTriggered -and -not $results[-1].Triggered) { $results[-1].Triggered = $true }
