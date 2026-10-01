@@ -1,0 +1,8 @@
+﻿{
+  "stryker-config": {
+    "project": "backend/src/WestCoastFitness.Application/WestCoastFitness.Application.csproj",
+    "test-projects": ["backend/tests/WestCoastFitness.Application.Tests/WestCoastFitness.Application.Tests.csproj"],
+    "reporters": ["html", "json"],
+    "thresholds": { "high": 80, "low": 60, "break": 0 }
+  }
+}
