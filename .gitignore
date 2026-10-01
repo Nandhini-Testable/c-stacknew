@@ -1,4 +1,4 @@
-# Build output
+﻿# Build output
 [Bb]in/
 [Oo]bj/
 dist/
@@ -41,3 +41,7 @@ Thumbs.db
 .vite/
 *.local
 *.tsbuildinfo
+
+reports/
+tools/.venv/
+coverage.xml

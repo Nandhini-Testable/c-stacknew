@@ -1,12 +1,26 @@
-using System.Text;
+﻿using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using WestCoastFitness.Api;
 using WestCoastFitness.Application;
 using WestCoastFitness.Infrastructure;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddOpenTelemetry()
+    .ConfigureResource(r => r.AddService("WestCoastFitness.Api"))
+    .WithTracing(t => t
+        .AddAspNetCoreInstrumentation()
+        .AddOtlpExporter(o => o.Endpoint = new Uri(builder.Configuration["OpenTelemetry:OtlpEndpoint"] ?? "http://127.0.0.1:4317"))
+        .AddJaegerExporter(o =>
+        {
+            o.AgentHost = builder.Configuration["OpenTelemetry:JaegerHost"] ?? "127.0.0.1";
+            o.AgentPort = int.Parse(builder.Configuration["OpenTelemetry:JaegerPort"] ?? "6831");
+        })
+        .AddZipkinExporter(o => o.Endpoint = new Uri(builder.Configuration["OpenTelemetry:ZipkinEndpoint"] ?? "http://127.0.0.1:9411/api/v2/spans")));
 builder.Services.AddScoped<MemberAccountService>();
 builder.Services.AddScoped<SubscriptionService>();
 builder.Services.AddScoped<ClassBookingService>();
