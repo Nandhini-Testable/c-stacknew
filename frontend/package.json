@@ -1,17 +1,20 @@
-{
-  "name": "nine-block-frontend",
-  "version": "1.0.0",
-  "description": "9-Block Talent Matrix UI built with React and Parcel",
-  "source": "index.html",
-  "scripts": {
-    "dev": "parcel index.html --port 3000",
-    "build": "parcel build index.html"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "parcel": "^2.12.0"
-  }
+﻿{
+    "name":  "nine-block-frontend",
+    "version":  "1.0.0",
+    "description":  "9-Block Talent Matrix UI built with React and Parcel",
+    "source":  "index.html",
+    "scripts":  {
+                    "dev":  "parcel index.html --port 3000",
+                    "build":  "parcel build index.html"
+                },
+    "dependencies":  {
+                         "react":  "^18.3.1",
+                         "react-dom":  "^18.3.1"
+                     },
+    "devDependencies":  {
+                            "parcel":  "^2.12.0"
+                        },
+    "engines":  {
+                    "node":  "\u003e=20.0.0"
+                }
 }
