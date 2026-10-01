@@ -1,0 +1,9 @@
+﻿<Project>
+  <PropertyGroup Condition="'$(LintGate)' == 'true' And '$(IsTestProject)' != 'true'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+  </PropertyGroup>
+  <Target Name="EnsureLintReportDirectory" BeforeTargets="CoreCompile" Condition="'$(IsTestProject)' != 'true'">
+    <MakeDir Directories="$(MSBuildThisFileDirectory)reports\lint" />
+  </Target>
+</Project>
