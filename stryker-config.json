@@ -1,0 +1,8 @@
+{
+  "stryker-config": {
+    "project": "backend/ScholarshipCMGroups.csproj",
+    "test-projects": ["tests/backend/ScholarshipCMGroups.Tests/ScholarshipCMGroups.Tests.csproj"],
+    "reporters": ["html", "json"],
+    "thresholds": { "high": 80, "low": 60, "break": 0 }
+  }
+}

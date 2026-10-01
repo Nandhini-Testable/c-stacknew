@@ -1,0 +1,39 @@
+name: C# Tools Verification
+
+on:
+  push:
+    branches:
+      - Scholarship-CMGroups-negative
+      - Scholarship-CMGroups-negative-1
+  workflow_dispatch:
+
+jobs:
+  csharp-tools:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run all C# tools
+        shell: pwsh
+        run: ./scripts/run-csharp-tools.ps1
+
+      - name: Upload tool reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: csharp-tool-reports
+          path: reports/
