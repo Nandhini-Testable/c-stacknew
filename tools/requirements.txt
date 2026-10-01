@@ -1,0 +1,3 @@
+lizard==1.17.10
+PyDriller==2.7
+semgrep==1.79.0
