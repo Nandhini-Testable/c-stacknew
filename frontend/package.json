@@ -1,19 +1,22 @@
-{
-  "name": "nine-block-frontend",
-  "version": "1.0.0",
-  "description": "9-Block Talent Matrix UI built with React and Vite",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.1",
-    "vite": "^5.4.8"
-  }
+﻿{
+    "name":  "nine-block-frontend",
+    "version":  "1.0.0",
+    "description":  "9-Block Talent Matrix UI built with React and Vite",
+    "type":  "module",
+    "scripts":  {
+                    "dev":  "vite",
+                    "build":  "vite build",
+                    "preview":  "vite preview"
+                },
+    "dependencies":  {
+                         "react":  "^18.3.1",
+                         "react-dom":  "^18.3.1"
+                     },
+    "devDependencies":  {
+                            "@vitejs/plugin-react":  "^4.3.1",
+                            "vite":  "^5.4.8"
+                        },
+    "engines":  {
+                    "node":  "\u003e=20.0.0"
+                }
 }
