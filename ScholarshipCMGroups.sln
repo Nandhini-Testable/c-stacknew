@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScholarshipCMGroups", "backend\ScholarshipCMGroups.csproj", "{43382551-A003-4D2A-BB0E-006F39CFFF46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4E5F84DF-873F-44A9-BF3C-90EC6D82C6EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{AFF65B40-0B5F-4F28-9A84-9D4CC9B0BE68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScholarshipCMGroups.Tests", "tests\backend\ScholarshipCMGroups.Tests\ScholarshipCMGroups.Tests.csproj", "{F69A6418-792D-4B77-985F-9A25250AC1DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43382551-A003-4D2A-BB0E-006F39CFFF46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43382551-A003-4D2A-BB0E-006F39CFFF46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43382551-A003-4D2A-BB0E-006F39CFFF46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43382551-A003-4D2A-BB0E-006F39CFFF46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69A6418-792D-4B77-985F-9A25250AC1DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69A6418-792D-4B77-985F-9A25250AC1DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69A6418-792D-4B77-985F-9A25250AC1DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69A6418-792D-4B77-985F-9A25250AC1DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
