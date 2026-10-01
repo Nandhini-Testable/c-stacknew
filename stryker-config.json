@@ -1,0 +1,8 @@
+{
+  "stryker-config": {
+    "project": "backend/NineBlock.csproj",
+    "test-projects": ["tests/NineBlock.Tests/NineBlock.Tests.csproj"],
+    "reporters": ["html", "json"],
+    "thresholds": { "high": 80, "low": 60, "break": 0 }
+  }
+}

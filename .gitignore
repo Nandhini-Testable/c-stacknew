@@ -44,6 +44,9 @@ ehthumbs_vista.db
 
 # Tool Trigger Reports
 **/report/
+reports/
+tools/.venv/
+coverage.xml
 
 # Spreadsheets
 *.xlsx
